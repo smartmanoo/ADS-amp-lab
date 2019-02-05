@@ -1,0 +1,544 @@
+
+hpeesofsim (*) 450.shp Jan 21 2016, MINT version 4
+    (64-bit windows built: 01/21/16 15:34:19)
+Copyright 1995 - 2015 Keysight Technologies, 1989-2016.
+
+Warning detected by hpeesofsim in Substrate model during netlist flattening.
+    Simulations referencing substrate `BPF.MSub1' will not include metal loss
+    because metal thickness is zero.
+
+HB HB1[1] <system_lib:final_hb_lo_swp:schematic>
+Pt DC convergence is used.
+    Number of tones:   1.
+    Number of frequencies:   4.
+    Number of time samples:  8.
+    Number of HB equations (problem size): 259.
+    Auto mode: on.
+    Convergence mode: Auto.
+    Linear solver: direct.
+------------------------------------------------------------------------------
+Newton solver:					
+Iter	KCL residual	Damp %	Sol update
+------------------------------------------------------------------------------
+0.0*	2 uA        	100.0             
+1.0 	13.8778 aA  	100.0	977.59 aV    
+
+HB HB1[1] <system_lib:final_hb_lo_swp:schematic>   LO_pwr=(-30->10)
+    Number of tones:   2.
+    Number of frequencies:   9.
+    Number of time samples:  32.
+    Number of HB equations (HB problem size): 629.
+    Number of SS/noise equations (SS/noise problem size): 1258.
+    Auto mode: on.
+    Convergence mode: Auto.
+    Linear solver: direct.
+    LO_pwr=-30            0.00% 1/41
+0.0*	63.2456 uA  	100.0             
+        Newton iteration failed, damping activated
+1.0*	2.02031 mA  	100.0             
+2.0*	2.02031 mA  	100.0             
+3.0*	55.3943 uA  	100.0             
+4.0 	948.539 nA  	100.0             
+4.1 	177.651 pA  	100.0	640.107 pV   
+
+HB_NOISE HB1[1].HB1[1/41] <system_lib:final_hb_lo_swp:schematic>
+Warning detected by hpeesofsim during spectral noise analysis `HB_NOISE'.
+    The global circuit temperature and the IEEE standard noise temperature
+    (290 Kelvin) do not agree in the spectral noise analysis `HB1'.  The
+    `Temp' parameter on the Options item can be set to 16.85 Celsius
+    to eliminate this warning message.  If the circuit temperature is
+    different from the IEEE standard temperature the loss and the noise
+    figure might not agree.
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-29            2.50% 2/41
+0.0 	233.725 uA  	100.0             
+0.1 	13.8798 uA  	100.0             
+0.2 	11.7486 nA  	100.0             
+0.3 	56.1926 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[2/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-28            5.00% 3/41
+0.0 	261.557 uA  	100.0             
+0.1 	15.5019 uA  	100.0             
+0.2 	16.5445 nA  	100.0             
+0.3 	111.565 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[3/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-27            7.50% 4/41
+0.0 	292.506 uA  	100.0             
+0.1 	17.2932 uA  	100.0             
+0.2 	23.28 nA    	100.0             
+0.3 	111.835 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[4/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-26           10.00% 5/41
+0.0 	326.842 uA  	100.0             
+0.1 	19.2627 uA  	100.0             
+0.2 	32.7255 nA  	100.0             
+0.3 	55.8364 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[5/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-25           12.50% 6/41
+0.0 	364.824 uA  	100.0             
+0.1 	21.4165 uA  	100.0             
+0.2 	45.9468 nA  	100.0             
+0.3 	55.7827 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[6/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-24           15.00% 7/41
+0.0 	406.683 uA  	100.0             
+0.1 	23.7553 uA  	100.0             
+0.2 	64.4107 nA  	100.0             
+0.3 	56.2875 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[7/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-23           17.50% 8/41
+0.0 	452.602 uA  	100.0             
+0.1 	26.272 uA   	100.0             
+0.2 	90.122 nA   	100.0             
+0.3 	34.8037 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[8/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-22           20.00% 9/41
+0.0 	502.677 uA  	100.0             
+0.1 	28.9483 uA  	100.0             
+0.2 	125.797 nA  	100.0             
+0.3 	56.0101 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[9/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-21           22.50% 10/41
+0.0 	556.88 uA   	100.0             
+0.1 	31.7503 uA  	100.0             
+0.2 	175.079 nA  	100.0             
+0.3 	27.4389 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[10/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-20           25.00% 11/41
+0.0 	614.998 uA  	100.0             
+0.1 	34.6228 uA  	100.0             
+0.2 	242.784 nA  	100.0             
+0.3 	77.6965 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[11/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-19           27.50% 12/41
+0.0 	676.571 uA  	100.0             
+0.1 	37.4833 uA  	100.0             
+0.2 	335.172 nA  	100.0             
+0.3 	111.754 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[12/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-18           30.00% 13/41
+0.0 	740.808 uA  	100.0             
+0.1 	40.2157 uA  	100.0             
+0.2 	460.206 nA  	100.0             
+0.3 	111.287 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[13/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-17           32.50% 14/41
+0.0 	806.513 uA  	100.0             
+0.1 	42.6638 uA  	100.0             
+0.2 	627.727 nA  	100.0             
+0.3 	111.551 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[14/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-16           35.00% 15/41
+0.0 	872.011 uA  	100.0             
+0.1 	44.6285 uA  	100.0             
+0.2 	849.471 nA  	100.0             
+0.3 	111.043 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[15/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-15           37.50% 16/41
+0.0 	935.105 uA  	100.0             
+0.1 	45.8681 uA  	100.0             
+0.2 	1.13877 uA  	100.0             
+0.3 	55.9962 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[16/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-14           40.00% 17/41
+0.0 	993.092 uA  	100.0             
+0.1 	46.1075 uA  	100.0             
+0.2 	1.50983 uA  	100.0             
+0.3 	56.4783 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[17/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-13           42.50% 18/41
+0.0 	1.04287 mA  	100.0             
+0.1 	45.0571 uA  	100.0             
+0.2 	1.97637 uA  	100.0             
+0.3 	111.307 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[18/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-12           45.00% 19/41
+0.0 	1.08117 mA  	100.0             
+0.1 	42.4429 uA  	100.0             
+0.2 	2.54977 uA  	100.0             
+0.3 	111.758 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[19/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-11           47.50% 20/41
+0.0 	1.10485 mA  	100.0             
+0.1 	38.0474 uA  	100.0             
+0.2 	3.23669 uA  	100.0             
+0.3 	52.4481 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[20/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-10           50.00% 21/41
+0.0 	1.1114 mA   	100.0             
+0.1 	31.7534 uA  	100.0             
+0.2 	4.03669 uA  	100.0             
+0.3 	111.89 aA   	100.0             
+
+
+HB_NOISE HB1[1].HB1[21/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-9            52.50% 22/41
+0.0 	1.09933 mA  	100.0             
+0.1 	23.5821 uA  	100.0             
+0.2 	4.94049 uA  	100.0             
+0.3 	111.406 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[22/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-8            55.00% 23/41
+0.0 	1.06856 mA  	100.0             
+0.1 	13.7127 uA  	100.0             
+0.2 	5.92938 uA  	100.0             
+0.3 	111.409 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[23/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-7            57.50% 24/41
+0.0 	1.02052 mA  	100.0             
+0.1 	2.47505 uA  	100.0             
+        Samanskii-Newton iteration failed
+0.2*	6.97643 uA  	100.0             
+        Newton iteration failed, damping activated
+1.0*	6.97666 uA  	 50.0             
+2.0*	2.25176 uA  	100.0             
+3.0*	3.48738 uA  	100.0             
+4.0*	58.36 aA    	100.0	3.20967 fV   
+
+
+HB_NOISE HB1[1].HB1[24/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-6            60.00% 25/41
+0.0 	958.096 uA  	100.0             
+0.1 	9.68663 uA  	100.0             
+0.2 	8.04924 uA  	100.0             
+0.3*	145.058 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[25/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-5            62.50% 26/41
+0.0 	885.159 uA  	100.0             
+0.1 	22.2711 uA  	100.0             
+0.2 	9.11387 uA  	100.0             
+0.3 	56.3795 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[26/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-4            65.00% 27/41
+0.0 	806.072 uA  	100.0             
+0.1 	34.7845 uA  	100.0             
+0.2 	10.1388 uA  	100.0             
+0.3 	166.916 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[27/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-3            67.50% 28/41
+0.0 	725.085 uA  	100.0             
+0.1 	46.7958 uA  	100.0             
+0.2 	11.098 uA   	100.0             
+0.3 	67.8289 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[28/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-2            70.00% 29/41
+0.0 	645.879 uA  	100.0             
+0.1 	57.9736 uA  	100.0             
+0.2 	11.9732 uA  	100.0             
+0.3 	77.3508 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[29/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=-1            72.50% 30/41
+0.0 	571.283 uA  	100.0             
+0.1 	68.0997 uA  	100.0             
+0.2 	12.7538 uA  	100.0             
+0.3 	166.561 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[30/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=0             75.00% 31/41
+0.0 	503.188 uA  	100.0             
+0.1 	77.0638 uA  	100.0             
+0.2 	13.4363 uA  	100.0             
+0.3 	106.056 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[31/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=1             77.50% 32/41
+0.0 	442.615 uA  	100.0             
+0.1 	84.8455 uA  	100.0             
+0.2 	14.023 uA   	100.0             
+0.3 	108.322 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[32/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=2             80.00% 33/41
+0.0 	389.871 uA  	100.0             
+0.1 	91.4907 uA  	100.0             
+0.2 	14.5202 uA  	100.0             
+0.3 	88.0824 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[33/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=3             82.50% 34/41
+0.0 	344.745 uA  	100.0             
+0.1 	97.0883 uA  	100.0             
+0.2 	14.9364 uA  	100.0             
+0.3 	99.4912 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[34/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=4             85.00% 35/41
+0.0 	306.687 uA  	100.0             
+0.1 	101.751 uA  	100.0             
+0.2 	15.2814 uA  	100.0             
+0.3 	174.157 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[35/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=5             87.50% 36/41
+0.0 	274.966 uA  	100.0             
+0.1 	105.599 uA  	100.0             
+0.2 	15.5651 uA  	100.0             
+0.3 	153.396 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[36/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=6             90.00% 37/41
+0.0 	248.776 uA  	100.0             
+0.1 	108.75 uA   	100.0             
+0.2 	15.7967 uA  	100.0             
+0.3 	118.231 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[37/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=7             92.50% 38/41
+0.0 	227.318 uA  	100.0             
+0.1 	111.316 uA  	100.0             
+0.2 	15.9848 uA  	100.0             
+0.3 	111.24 aA   	100.0             
+
+
+HB_NOISE HB1[1].HB1[38/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=8             95.00% 39/41
+0.0 	209.847 uA  	100.0             
+0.1 	113.395 uA  	100.0             
+0.2 	16.1369 uA  	100.0             
+0.3 	56.1617 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[39/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=9             97.50% 40/41
+0.0 	195.692 uA  	100.0             
+0.1 	115.072 uA  	100.0             
+0.2 	16.2594 uA  	100.0             
+0.3 	121.668 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[40/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+    LO_pwr=10           100.00% 41/41
+0.0 	210.572 uA  	100.0             
+0.1 	116.421 uA  	100.0             
+0.2 	16.3578 uA  	100.0             
+0.3 	121.653 aA  	100.0             
+
+
+HB_NOISE HB1[1].HB1[41/41] <system_lib:final_hb_lo_swp:schematic>
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+    Noise Freq=100 MHz  NFssb=0dB  NFdsb=0dB  Conv Gain=-1500dB
+
+Resource usage:
+  Total stopwatch time     =     4.13 seconds.
+

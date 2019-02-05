@@ -1,0 +1,65 @@
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="Amplifier_lib:ckt_env_gsm:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+define bjt_pkg ( C  B  E ) 
+parameters  beta=100 
+"BJTM1":BJT1  N__3 N__12 N__6 Mode=1 Noise=yes 
+model BJTM1 BJT NPN=1 PNP=0 Bf=beta Vaf=50 Ise=0.02e-12 Lateral=0 RbModel=0 Approxqb=1 
+C:C1  N__6 N__12 C=120 fF 
+C:C2  N__6 N__3 C=120 fF 
+L:L1  C N__3 L=320.0 pH Noise=yes  
+L:L2  N__6 E L=320 pH Noise=yes  
+L:L3  B N__12 L=320 pH R=0.01 Ohm Noise=yes  
+end bjt_pkg
+bjt_pkg:Q1  VC VB 0 beta=160 
+C:C7  N__6 0 C=350 fF 
+R:R2  Vcc N__8 R=590 Ohm Noise=yes 
+R:R3  N__8 N__16 R=56 kOhm Noise=yes 
+L:L1  N__16 VB L=120 nH Noise=yes  
+C:C1  N__6 VB C=10 pF 
+C:C6  VC N__14 C=10 pF 
+C:C8  N__14 0 C=220 fF 
+L:L3  Vin N__6 L=18.3 nH R=12 Ohm Noise=yes  
+L:L2  N__8 VC L=120 nH Noise=yes  
+Port:Term2  Vout 0 Num=2 Z=50 Ohm Noise=yes 
+V_Source:SRC1  Vcc 0 Type="V_DC" Vdc=5 V SaveCurrent=1 
+L:L4  N__14 Vout L=27.1 nH R=6 Ohm Noise=yes  
+
+HB:Env1 Freq[1]=RF_freq \
+ Order[1]=5 \
+  MaxOrder=4 StatusLevel=1 FundOversample=2 EnvIntegOrder=1 EnvBandwidth=1 \
+ EnvWarnPoorFit=yes EnvUsePoorFit=yes SweepVar="time" DevOpPtLevel=0 SweepPlan="Env1_stim" OutputPlan="Env1_Output"
+
+OutputPlan:Env1_Output \
+       Type="Output" \
+       UseNodeNestLevel=yes \
+       NodeNestLevel=2 \
+       UseEquationNestLevel=yes \
+       EquationNestLevel=2 \
+       UseSavedEquationNestLevel=yes \
+       SavedEquationNestLevel=2 \
+       UseDeviceCurrentNestLevel=no \
+       DeviceCurrentNestLevel=0 \
+       DeviceCurrentDeviceType="All" \
+       DeviceCurrentSymSyntax=yes \
+       UseCurrentNestLevel=yes \
+       CurrentNestLevel=999 \
+       UseDeviceVoltageNestLevel=no \
+       DeviceVoltageNestLevel=0 \
+       DeviceVoltageDeviceType="All" 
+
+SweepPlan:Env1_stim Stop=t_stop Step=t_step
+
+Tran:Env1_tran HB_Sol=1 SteadyState=1 StatusLevel=3 \
+ Freq[1]=RF_freq \
+ Order[1]=5 \
+ OutputPlan="Env1_Output"
+
+Component:tahb_Env1 Module="ATAHB" Type="ModelExtractor" Tran_Analysis="Env1_tran" HB_Analysis="Env1"
+
+#uselib "sml" , "PtRF_GSM"
+PtRF_GSM:SRC2  Vin 0 bits_out F0=RF_freq Power=dbmtow(RF_pwr) Rout=50 Ohm DataRate=270.833 KHz InitBits="001101010010" Num=1 
+
+RF_pwr=-40
+t_step=1/(5*270.833 KHz)
+RF_freq=1900 MHz
+t_stop =200 us

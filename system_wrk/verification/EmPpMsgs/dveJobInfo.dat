@@ -1,0 +1,5 @@
+jobName=EmPpMsgs
+jobType=emprep
+designName=system_lib:filter_mom:layout
+ruleFilePath=
+addInfo="EM preprocessor messages displayed as DRC errors"

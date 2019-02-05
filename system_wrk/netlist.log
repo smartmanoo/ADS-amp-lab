@@ -1,0 +1,103 @@
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="system_lib:final_env_cdma:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+define bjt_pkg_v1 ( C  B  E ) 
+parameters  beta=100 
+"BJTM1":BJT1  N__3 N__12 N__6 Mode=1 Noise=yes 
+model BJTM1 BJT NPN=1 PNP=0 Bf=beta Vaf=50 Ise=0.02e-12 Lateral=0 RbModel=0 Approxqb=1 
+C:C1  N__6 N__12 C=120 fF 
+C:C2  N__6 N__3 C=120 fF 
+L:L1  C N__3 L=320.0 pH Noise=yes  
+L:L2  N__6 E L=320 pH Noise=yes  
+L:L3  B N__12 L=320 pH R=0.01 Ohm Noise=yes  
+end bjt_pkg_v1
+define AMP_1900_v1 ( P1  P2 ) 
+;parameters 
+bjt_pkg_v1:Q1  N__17 N__4 0 beta=160 
+C:C7  N__6 0 C=350 fF 
+R:R2  Vcc N__8 R=590 Ohm Noise=yes 
+R:R3  N__8 N__16 R=56 kOhm Noise=yes 
+L:L1  N__16 N__4 L=120 nH Noise=yes  
+C:C1  N__6 N__4 C=10 pF 
+C:C6  N__17 N__14 C=10 pF 
+C:C8  N__14 0 C=220 fF 
+L:L3  P1 N__6 L=18.3 nH R=12 Ohm Noise=yes  
+L:L2  N__8 N__17 L=120 nH Noise=yes  
+V_Source:SRC1  Vcc 0 Type="V_DC" Vdc=5 V SaveCurrent=1 
+L:L4  N__14 P2 L=27.1 nH R=6 Ohm Noise=yes  
+end AMP_1900_v1
+define DA_LCLowpassDT1_filter_lpf ( P1  P2 ) 
+parameters  Fp=1 GHz  Fs=2 GHz  Ap=3 dB  As=20 dB  N=0  ResponseType=1  MinLorC=4  Rg=50 Ohm  Rl=50 Ohm  MaxRealizations=25 
+C:C1  P1 0 C=8.505327 pF 
+L:L1  P1 P2 L=42.526635 nH R=1e-12 Ohm Noise=yes  
+C:C2  P2 0 C=8.505327 pF 
+end DA_LCLowpassDT1_filter_lpf
+define filter_1900 ( P1  P2 ) 
+;parameters 
+MCFIL:CLin1  P1 N__3 Subst="MSub1" W=7.4 mil S=3.4 mil L=627.8 mil 
+MCFIL:CLin2  N__3 N__4 Subst="MSub1" W=9.6 mil S=11.9 mil L=614.8 mil 
+model MSub1 MSUB H=10.0 mil Er=9.6 Mur=1 Cond=1.0E+50 Hu=3.9e+034 mil T=0 mil TanD=0 Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
+MCFIL:CLin3  N__4 P2 Subst="MSub1" W=7.4 mil S=3.4 mil L=627.8 mil 
+end filter_1900
+AMP_1900_v1:AMP_1  N__1 N__0 
+filter_1900:BPF  Vin N__1 
+DA_LCLowpassDT1_filter_lpf:DA_LCLowpassDT1  N__3 Vout Fp=1 GHz Fs=2 GHz Ap=3 dB As=20 dB N=0 ResponseType=1 MinLorC=4 Rg=50 Ohm Rl=50 Ohm MaxRealizations=25 
+Mixer:MIX1  N__0 N__3 N__10 SideBand=-1 ConvGain=dbpolar(3,0) S11=polar(0,0) S22=polar(0,180) S33=0 PminLO=-5 GainCompType=0 ReferToInput=0 GainCompSat=5.0 dB GainComp=1.0 dB 
+Port:PORT2  N__10 0 Num=2 Z=50 Ohm P[1]=dbmtow(LO_pwr) Freq[1]=LO_freq    Noise=yes Pac=polar(dbmtow(0),0) 
+Port:Term3  Vout 0 Num=3 Z=50 Ohm Noise=yes 
+
+LO_freq=1800 MHz
+RF_freq=1900 MHz
+LO_pwr=-20
+RF_pwr=-40
+aele IF_out = mix(Vout,{-1,1});
+#uselib "sml" , "PtRF_CDMA_ESG_FWD"
+PtRF_CDMA_ESG_FWD:SRC1  Vin 0 F0=RF_freq Power=dbmtow(RF_pwr) Z=50 Ohm Num=1 
+
+bit_rate=1.2288 MHz
+t_stop=num_sym/(bit_rate/2)
+sam_per_bit=4
+num_sym=256
+t_step=1/(bit_rate*sam_per_bit)
+
+Options:Options1 Tnom=25 TopologyCheck=yes ForceS_Params=yes GiveAllWarnings=yes MaxWarnings=10  \
+SaveBranchCurrents=no OutputInternalNodes=no ForceM_Params=yes DC_ReadInitialGuess=no DC_WriteFinalSolution=no  \
+TopologyCheckMessages=no GPU=no doDeltaAC=no ReduceSPort=no ReduceSPortRatio=0.5  \
+WarnSOA=yes MaxWarnSOA=5 Census=no MinNodalR=1e-2 Ohm LargeCapThreshold=1e-3 F 
+
+
+HB:Env1 Freq[1]=LO_freq \
+Freq[2]=RF_freq \
+ Order[1]=3 \
+Order[2]=1 \
+  MaxOrder=4 StatusLevel=1 FundOversample=2 EnvIntegOrder=1 EnvBandwidth=1 \
+ EnvWarnPoorFit=yes EnvUsePoorFit=yes SweepVar="time" DevOpPtLevel=0 SweepPlan="Env1_stim" OutputPlan="Env1_Output"
+
+OutputPlan:Env1_Output \
+       Type="Output" \
+       NodeName[1]="Vin" \
+       SavedEquationName[1]="IF_out" \
+       UseNodeNestLevel=yes \
+       NodeNestLevel=2 \
+       UseEquationNestLevel=yes \
+       EquationNestLevel=2 \
+       UseSavedEquationNestLevel=yes \
+       SavedEquationNestLevel=2 \
+       UseDeviceCurrentNestLevel=no \
+       DeviceCurrentNestLevel=0 \
+       DeviceCurrentDeviceType="All" \
+       DeviceCurrentSymSyntax=yes \
+       UseCurrentNestLevel=yes \
+       CurrentNestLevel=999 \
+       UseDeviceVoltageNestLevel=no \
+       DeviceVoltageNestLevel=0 \
+       DeviceVoltageDeviceType="All" 
+
+SweepPlan:Env1_stim Stop=t_stop Step=t_step
+
+Tran:Env1_tran HB_Sol=1 SteadyState=1 StatusLevel=3 \
+ Freq[1]=LO_freq \
+ Order[1]=3 \
+ OutputPlan="Env1_Output"
+
+Component:tahb_Env1 Module="ATAHB" Type="ModelExtractor" Tran_Analysis="Env1_tran" HB_Analysis="Env1"
+

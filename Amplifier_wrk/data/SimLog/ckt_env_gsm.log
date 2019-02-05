@@ -1,0 +1,15 @@
+
+hpeesofsim (*) 450.shp Jan 21 2016, MINT version 4
+    (64-bit windows built: 01/21/16 15:34:19)
+Copyright 1995 - 2015 Keysight Technologies, 1989-2016.
+
+
+HB Env1[1] <Amplifier_lib:ckt_env_gsm:schematic>   time=(0 s->200.123 us)
+.
+COMPONENT : SRC2.CMP1.CMP85 envelope bandwidth characterization
+F=0 Param=2 Pts=27
+...............................................................................................................................................................................................................................................................................
+
+Resource usage:
+  Total stopwatch time     =     3.73 seconds.
+

@@ -1,0 +1,8 @@
+INCLUDE $HPEESOF_DIR/oalibs/analog_rf.defs
+INCLUDE $HPEESOF_DIR/oalibs/dsp.defs
+INCLUDE $HOME/bandpassfilter_wrk/MurataDynamicModel/lib.defs
+INCLUDE $HOME/bandpassfilter_wrk/TDK_Library_for_ADS_v2017.10/lib.defs
+INCLUDE $HOME/bandpassfilter_wrk/RF_Power_ADS_DesignKit_ads2017p1p9/lib.defs
+INCLUDE $HOME/bandpassfilter_wrk/Infineon_RF/lib.defs
+DEFINE Amplifier_lib Amplifier_lib
+ASSIGN Amplifier_lib libMode shared

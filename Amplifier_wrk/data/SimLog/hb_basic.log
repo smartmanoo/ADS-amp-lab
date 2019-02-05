@@ -1,0 +1,44 @@
+
+hpeesofsim (*) 450.shp Jan 21 2016, MINT version 4
+    (64-bit windows built: 01/21/16 15:34:19)
+Copyright 1995 - 2015 Keysight Technologies, 1989-2016.
+
+
+HB HB1[1] <Amplifier_lib:hb_basic:schematic>
+    Number of tones:   1.
+    Number of frequencies:   4.
+    Number of time samples:  8.
+    Number of HB equations (problem size): 140.
+    Auto mode: on.
+    Convergence mode: Auto.
+    Linear solver: direct.
+------------------------------------------------------------------------------
+Newton solver:					
+Iter	KCL residual	Damp %	Sol update
+------------------------------------------------------------------------------
+0.0*	149.981 uA  	100.0             
+1.0 	1.51469 uA  	100.0             
+1.1 	36.1511 nA  	100.0             
+1.2 	841.994 pA  	100.0	90.1426 nV   
+An HB truncation error may be present.
+o The HB truncation error is due to using a finite order 
+  (number of harmonics) in the representation of the
+  circuit signals.
+
+Waveform                Trunc error             Tolerance
+---------------------------------------------------------
+Q1.N__3                 3.699e-04       >       1.595e-06
+Q1.N__6                 1.069e-05       >       1.003e-06
+Q1.N__12                5.709e-06       >       1.007e-06
+
+o Number of waveforms violating the HB truncation error check:
+        3 out of 3 waveforms.
+o Estimated max HB truncation error: 3.699e-04 @ waveform Q1.N__3 .
+o The maximal HB truncation error estimate is greater than the 
+  achieved tolerance of 1.595e-06 for this waveform.
+o To reduce the error, increase the order (number of harmonics) 
+  and re-simulate.
+
+Resource usage:
+  Total stopwatch time     =     2.68 seconds.
+

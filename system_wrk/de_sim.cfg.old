@@ -1,0 +1,15 @@
+DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_SYMBOLS=C:\Users\DM157\bandpassfilter_wrk\MurataDynamicModel\circuit\symbols;C:\Users\DM157\bandpassfilter_wrk\MurataDynamicModel\circuit\symbols;C:\Users\DM157\bandpassfilter_wrk\TDK_Library_for_ADS_v2017.10\circuit\symbols;C:\Users\DM157\bandpassfilter_wrk\TDK_Library_for_ADS_v2017.10\circuit\symbols;C:\Users\DM157\bandpassfilter_wrk\Infineon_RF\circuit\symbols;C:\Users\DM157\bandpassfilter_wrk\Infineon_RF\circuit\symbols
+SYSTEM_CUSTOM_CIRCUIT_SYMBOLS={%DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_SYMBOLS};{$HPEESOF_DIR}\custom\{%PROJECT1}\symbols
+DESIGN_KIT_DATA_FILES=C:\Users\DM157\bandpassfilter_wrk\MurataDynamicModel\circuit\data;C:\Users\DM157\bandpassfilter_wrk\MurataDynamicModel\circuit\models;C:\Users\DM157\bandpassfilter_wrk\TDK_Library_for_ADS_v2017.10\circuit\data;C:\Users\DM157\bandpassfilter_wrk\TDK_Library_for_ADS_v2017.10\circuit\models;C:\Users\DM157\bandpassfilter_wrk\RF_Power_ADS_DesignKit_ads2017p1p9\circuit\data;C:\Users\DM157\bandpassfilter_wrk\RF_Power_ADS_DesignKit_ads2017p1p9\circuit\models;C:\Users\DM157\bandpassfilter_wrk\Infineon_RF\circuit\data;C:\Users\DM157\bandpassfilter_wrk\Infineon_RF\circuit\models
+DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_DESIGNS=C:\Users\DM157\bandpassfilter_wrk\MurataDynamicModel\circuit\artwork;C:\Users\DM157\bandpassfilter_wrk\MurataDynamicModel\circuit\artwork;C:\Users\DM157\bandpassfilter_wrk\TDK_Library_for_ADS_v2017.10\circuit\artwork;C:\Users\DM157\bandpassfilter_wrk\TDK_Library_for_ADS_v2017.10\circuit\artwork
+SYSTEM_CUSTOM_CIRCUIT_DESIGNS={%DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_DESIGNS};{$HPEESOF_DIR}\custom\{%PROJECT1}\designs
+VIA_CONFIG_PATH={%DESIGN_KIT_VIA_CONFIG_PATH};.:{%PROJECT_SEARCH_PATH}:{$HOME}\hpeesof\de\defaults:{$HPEESOF_DIR}\de\defaults:{%DESIGN_KIT_VIA_CONFIG_PATH}:{%USER_VIA_CONFIG_PATH}
+LAST_LIBRARY_SELECTED=system_lib
+SCHEM_FILE_OPEN_HISTORY_1=system_lib:filter_mom:schematic
+SCHEM_FILE_OPEN_HISTORY_2=system_lib:filter_1900:schematic
+SCHEM_FILE_OPEN_HISTORY_3=system_lib:filter_trans:schematic
+SCHEM_FILE_OPEN_HISTORY_4=system_lib:SA_LCLowpassDT1_filter_lpf:schematic
+LAYOUT_FILE_OPEN_HISTORY_1=system_lib:filter_mom:layout
+SYMBOL_FILE_OPEN_HISTORY_1=system_lib:filter_1900:symbol
+SUBSTRATE_FILE_OPEN_HISTORY_1=system_lib:filter_mom
+SUBSTRATE_FILE_OPEN_HISTORY_2=system_lib:substrate1

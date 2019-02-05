@@ -1,0 +1,43 @@
+CITIFILE A.01.01
+#Momentum: B.12.00.024 (*) built: Jan 14 2016 
+#Momentum Date and Time: Mon Feb 04 15:05:58 2019
+
+NAME Momentum.SP
+
+# project: proj  [ S_smoothed = S_calculated * smoothing_factor ]
+
+CONSTANT NORMALIZATION 1.000137115
+
+VAR freq MAG 12
+
+DATA smoothing_factor RI
+
+VAR_LIST_BEGIN
+	 1000000000
+	 1333333334
+	 1500000001
+	 1666666667
+	 1777777778
+	 1870370371
+	 1888888889
+	 1962962963
+	 2333333333
+	 2500000000
+	 2666666667
+	 3000000000
+VAR_LIST_END
+
+BEGIN
+	 0.99999725600000011 ,	 0 
+	 1 ,	 0 
+	 1 ,	 0 
+	 1 ,	 0 
+	 1 ,	 0 
+	 1 ,	 0 
+	 1 ,	 0 
+	 0.99986469600000005 ,	 0 
+	 0.9999884750000001 ,	 0 
+	 1 ,	 0 
+	 1 ,	 0 
+	 1 ,	 0 
+END

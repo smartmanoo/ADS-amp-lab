@@ -1,0 +1,16 @@
+#Momentum: B.12.00.024 (*) built: Jan 14 2016 
+#Momentum Date and Time: Mon Feb 04 15:05:41 2019
+
+Overall database status : 1 (file present and valid)
+
+Frequency range : from 0.01057338886 GHz to 60 GHz.
+
+Requested frequency range : from 1 GHz to 3 GHz.
+
+Individual status fields : (0 = FALSE, 1 = TRUE)
+ File exists             : 1
+ Substrates match        : 1
+ Frequency-range matches : 1
+
+Corresponding potentialpath : C:\Program Files\Keysight\ADS2016_01\Momentum\12.00/
+Corresponding potentialname : C:\Program Files\Keysight\ADS2016_01\Momentum\12.00\\substrates\0004.sdb
